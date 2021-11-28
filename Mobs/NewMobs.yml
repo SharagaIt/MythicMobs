@@ -1,0 +1,35 @@
+Legion:
+  Type: ZOMBIE                                                                                      # --- Тип моба --- #
+  Display: '&6&lLegion Zombie'                                                                      # --- Отображаемое имя --- #
+  Health: 100                                                                                       # --- Здоровье --- #
+  Damage: 2                                                                                         # --- Урон моба --- #
+  Armor: 5                                                                                          # --- Броня (урон = урон игрока - броня) --- #
+  Faction: Zombies                                                                                  # --- Фракции --- #
+  BossBar:
+    Enabled: true
+    Range: 10
+    Style: SOLID #SEGMENTED_(8,10,12)#
+    Color: GREEN
+    Title: '&6&lLegion &f- <mob.hp>'
+  Options:
+    AlwaysShowName: true #Всегда показывать имя
+    PreventRandomEquipment: true #Случайная экипировка
+    PreventItemPickup: true #Подбор предметов
+    PreventOtherDrops: true #Сбрасывать предметы
+    Despawn: false #Удаление
+    Persistent: true #Имунитет к командам админа
+    Invicible: false #Бесмертие
+    KnockbackResistance: 0.5 #Имунитет к отбрасыванию (0-1)
+    MaxCombatDistance: 10 #Максимальная боевая дистанция
+    FollowRange: 10 #Диапазон следования
+    MovementSpeed: 0.25 #Скорость движения
+    NoAI: true #Интелект
+    Silent: true #Безмолвный
+  AITargetSelector: #Мофидикатор цели ИИ
+    - 0 clear
+#    - 1 OtherFaction
+    - 1 SpecificFactionMonsters #NAME#
+    - 2 monsters
+  AIGoalSelector: #Выбор цели ИИ
+  Skills: # --- Умение --- #
+    - actionmessage{m="&lHealth - <mob.hp>"} @PIR ~onTimer:5
