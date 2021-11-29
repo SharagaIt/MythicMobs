@@ -30,6 +30,15 @@ Legion:
 #    - 1 OtherFaction
     - 1 SpecificFactionMonsters #NAME#
     - 2 monsters
-  AIGoalSelector: #Выбор цели ИИ
+  AIGoalSelector: #Тип атаки на цели ИИ
+    - 0 clear
+    - 1 avoidzombies
+  Equipment:
+    - LEGION_HELMET:4
+    - IRON_CHESTPLATE:3
+    - IRON_LEGGINS:2
+    - IRON_BOOTS:1
+    - SHIELD:5
+    - IRON_SWORD:0
   Skills: # --- Умение --- #
     - actionmessage{m="&lHealth - <mob.hp>"} @PIR ~onTimer:5

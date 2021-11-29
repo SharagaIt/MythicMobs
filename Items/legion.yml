@@ -1,0 +1,12 @@
+LEGION_HELMET:
+  Id: LEATHER_HELMET
+  Display: '&3Legion Helmet'
+  Lore:
+    - ''
+    - '&6LEGION.'
+    - ''
+  Options:
+    Color: 255,40,40
+    unbreatable: true
+  Enchantments:
+    - DURABILITY: 5
