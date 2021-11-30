@@ -3,15 +3,15 @@ Legion:
   Display: '&6&lLegion Zombie'                                                                      # --- Отображаемое имя --- #
   Health: 100                                                                                       # --- Здоровье --- #
   Damage: 2                                                                                         # --- Урон моба --- #
-  Armor: 5                                                                                          # --- Броня (урон = урон игрока - броня) --- #
+  Armor: 0                                                                                          # --- Броня (урон = урон игрока - броня) --- #
   Faction: Zombies                                                                                  # --- Фракции --- #
-  BossBar:
-    Enabled: true
-    Range: 10
-    Style: SOLID #SEGMENTED_(8,10,12)#
-    Color: GREEN
-    Title: '&6&lLegion &f- <mob.hp>'
-  Options:
+  BossBar: #Полоска босса
+    Enabled: true #Включение
+    Range: 10 #Радиус показа (блок)
+    Style: SOLID #SEGMENTED_(8,10,12) - альтернатива (полоска с разделителями)# #Стиль полоски - Сплошная полоска
+    Color: GREEN #Цвет (из основных)
+    Title: '&6&lLegion &f- <mob.hp>' #Заголовок
+  Options: #Настройки
     AlwaysShowName: true #Всегда показывать имя
     PreventRandomEquipment: true #Случайная экипировка
     PreventItemPickup: true #Подбор предметов
@@ -26,19 +26,29 @@ Legion:
     NoAI: true #Интелект
     Silent: true #Безмолвный
   AITargetSelector: #Мофидикатор цели ИИ
-    - 0 clear
-#    - 1 OtherFaction
-    - 1 SpecificFactionMonsters #NAME#
-    - 2 monsters
+    - 0 clear #Очистка дефолтных параметров
+    #    - 1 OtherFaction
+    - 1 SpecificFactionMonsters #NAME# #Моб фракции
+    - 2 monsters #Монстры
   AIGoalSelector: #Тип атаки на цели ИИ
-    - 0 clear
-    - 1 avoidzombies
-  Equipment:
-    - LEGION_HELMET:4
-    - IRON_CHESTPLATE:3
-    - IRON_LEGGINS:2
-    - IRON_BOOTS:1
-    - SHIELD:5
-    - IRON_SWORD:0
+    - 0 clear #Очистка дефолтных параметров
+    - 1 avoidzombies #Атака зомби
+  Equipment: #Экипирование
+    - LEGION_HELMET:4 #Шлем
+    - IRON_CHESTPLATE:3 #Нагрудник
+    - IRON_LEGGINS:2 #Штаны
+    - IRON_BOOTS:1 #Ботинки
+    - SHIELD:5 #Вторая рука
+    - IRON_SWORD:0 #Основная рука
+  DamageModifiers: #Модификаторы урона (лучше поставить броне 0)
+    - ENTITY_ATTACK 0.5 #Урон от обычной атаки
+    - PROJECTILE 2.0 #Урон от стрел
+    - LAVA 0.0 #Урон от лавы
+    - FIRE 0.0 #Урон от огня
+    - FIRE_TICK 0.0 #Урон от огня в тик
+  Drops: #Вещи после убийства
+    - LegionTables #Отдельный файл с дропом
+  KillMessages: #Сообщение об убийстве
+    - '<target.name> was kill by <mob.name>' #Текст убийства
   Skills: # --- Умение --- #
-    - actionmessage{m="&lHealth - <mob.hp>"} @PIR ~onTimer:5
+    - actionmessage{m="&lHealth - <mob.hp>"} @PIR ~onTimer:5 #Отображение ХП на экране
