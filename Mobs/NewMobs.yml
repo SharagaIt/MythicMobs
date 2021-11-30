@@ -1,54 +1,54 @@
-Legion:
-  Type: ZOMBIE                                                                                      # --- Тип моба --- #
-  Display: '&6&lLegion Zombie'                                                                      # --- Отображаемое имя --- #
-  Health: 100                                                                                       # --- Здоровье --- #
-  Damage: 2                                                                                         # --- Урон моба --- #
-  Armor: 0                                                                                          # --- Броня (урон = урон игрока - броня) --- #
-  Faction: Zombies                                                                                  # --- Фракции --- #
-  BossBar: #Полоска босса
-    Enabled: true #Включение
-    Range: 10 #Радиус показа (блок)
-    Style: SOLID #SEGMENTED_(8,10,12) - альтернатива (полоска с разделителями)# #Стиль полоски - Сплошная полоска
-    Color: GREEN #Цвет (из основных)
-    Title: '&6&lLegion &f- <mob.hp>' #Заголовок
-  Options: #Настройки
-    AlwaysShowName: true #Всегда показывать имя
-    PreventRandomEquipment: true #Случайная экипировка
-    PreventItemPickup: true #Подбор предметов
-    PreventOtherDrops: true #Сбрасывать предметы
-    Despawn: false #Удаление
-    Persistent: true #Имунитет к командам админа
-    Invicible: false #Бесмертие
-    KnockbackResistance: 0.5 #Имунитет к отбрасыванию (0-1)
-    MaxCombatDistance: 10 #Максимальная боевая дистанция
-    FollowRange: 10 #Диапазон следования
-    MovementSpeed: 0.25 #Скорость движения
-    NoAI: true #Интелект
-    Silent: true #Безмолвный
-  AITargetSelector: #Мофидикатор цели ИИ
-    - 0 clear #Очистка дефолтных параметров
+Legion: # --- Название моба --- #
+  Type: ZOMBIE # --- Тип моба --- #
+  Display: '&6&lLegion Zombie' # --- Отображаемое имя --- #
+  Health: 100 # --- Здоровье --- #
+  Damage: 2 # --- Урон моба --- #
+  Armor: 0 # --- Броня (урон = урон игрока - броня) --- #
+  Faction: Zombies # --- Фракции --- #
+  BossBar: # --- Полоска босса --- #
+    Enabled: true # --- Включение --- #
+    Range: 10 # --- Радиус показа (блок) --- #
+    Style: SOLID #===| SEGMENTED_(8,10,12) - альтернатива (полоска с разделителями) |===# # --- Стиль полоски - Сплошная полоска --- #
+    Color: GREEN # --- Цвет (из основных) --- #
+    Title: '&6&lLegion &f- <mob.hp>' # --- Заголовок --- #
+  Options: # --- Настройки --- #
+    AlwaysShowName: true # --- Всегда показывать имя --- #
+    PreventRandomEquipment: true # --- Случайная экипировка --- #
+    PreventItemPickup: true # --- Подбор предметов --- #
+    PreventOtherDrops: true # --- Сбрасывать предметы --- #
+    Despawn: false # --- Удаление --- #
+    Persistent: true # --- Имунитет к командам админа --- #
+    Invicible: false # --- Бесмертие --- #
+    KnockbackResistance: 0.5 # --- Имунитет к отбрасыванию (0-1) --- #
+    MaxCombatDistance: 10 # --- Максимальная боевая дистанция --- #
+    FollowRange: 10 # --- Диапазон следования --- #
+    MovementSpeed: 0.25 # --- Скорость движения --- #
+    NoAI: true # --- Интелект --- #
+    Silent: true # --- Безмолвный --- #
+  AITargetSelector: # --- Мофидикатор цели ИИ --- #
+    - 0 clear # --- Очистка дефолтных параметров --- #
     #    - 1 OtherFaction
-    - 1 SpecificFactionMonsters #NAME# #Моб фракции
-    - 2 monsters #Монстры
-  AIGoalSelector: #Тип атаки на цели ИИ
-    - 0 clear #Очистка дефолтных параметров
-    - 1 avoidzombies #Атака зомби
-  Equipment: #Экипирование
-    - LEGION_HELMET:4 #Шлем
-    - IRON_CHESTPLATE:3 #Нагрудник
-    - IRON_LEGGINS:2 #Штаны
-    - IRON_BOOTS:1 #Ботинки
-    - SHIELD:5 #Вторая рука
-    - IRON_SWORD:0 #Основная рука
-  DamageModifiers: #Модификаторы урона (лучше поставить броне 0)
-    - ENTITY_ATTACK 0.5 #Урон от обычной атаки
-    - PROJECTILE 2.0 #Урон от стрел
-    - LAVA 0.0 #Урон от лавы
-    - FIRE 0.0 #Урон от огня
-    - FIRE_TICK 0.0 #Урон от огня в тик
-  Drops: #Вещи после убийства
-    - LegionTables #Отдельный файл с дропом
-  KillMessages: #Сообщение об убийстве
-    - '<target.name> was kill by <mob.name>' #Текст убийства
+    - 1 SpecificFactionMonsters #NAME# # --- Моб фракции --- #
+    - 2 monsters # --- Монстры --- #
+  AIGoalSelector: # --- Тип атаки на цели ИИ --- #
+    - 0 clear # --- Очистка дефолтных параметров --- #
+    - 1 avoidzombies # --- Атака зомби --- #
+  Equipment: # --- Экипирование --- #
+    - LEGION_HELMET:4 # --- Шлем --- #
+    - IRON_CHESTPLATE:3 # --- Нагрудник --- #
+    - IRON_LEGGINS:2 # --- Штаны --- #
+    - IRON_BOOTS:1 # --- Ботинки --- #
+    - SHIELD:5 # --- Вторая рука --- #
+    - IRON_SWORD:0 # --- Основная рука --- #
+  DamageModifiers: # --- Модификаторы урона (лучше поставить броне 0) --- #
+    - ENTITY_ATTACK 0.5 # --- Урон от обычной атаки --- #
+    - PROJECTILE 2.0 # --- Урон от стрел --- #
+    - LAVA 0.0 # --- Урон от лавы ---#
+    - FIRE 0.0 # --- Урон от огня --- #
+    - FIRE_TICK 0.0 # --- Урон от огня в тик --- #
+  Drops: # --- Вещи после убийства --- #
+    - LegionTables # --- Отдельный файл с дропом --- #
+  KillMessages: # --- Сообщение об убийстве --- #
+    - '<target.name> was kill by <mob.name>' # --- Текст убийства --- #
   Skills: # --- Умение --- #
-    - actionmessage{m="&lHealth - <mob.hp>"} @PIR ~onTimer:5 #Отображение ХП на экране
+    - actionmessage{m="&lHealth - <mob.hp>"} @PIR ~onTimer:5 # --- Отображение ХП на экране --- #
