@@ -1,12 +1,26 @@
-LEGION_HELMET: # --- Название --- #
+LEGIONHELMET: # --- Название --- #
   Id: LEATHER_HELMET # --- Название основного предмета --- #
-  Display: '&3Legion Helmet' # --- Отображаемое имя --- #
+  Display: '&6Legion Helmet' # --- Отображаемое имя --- #
   Lore: # --- Лоп --- #
     - '' # --- Первая строчка --- #
-    - '&6LEGION.' # --- Вторая строчка --- #
+    - '&6LEGION' # --- Вторая строчка --- #
     - '' # --- Третья строчка --- #
   Options: # --- Настройки --- #
     Color: 255,40,40 # --- Цвет --- #
-    unbreatable: true # --- Использовать на наковальне --- #
+    Unbreakable: true # --- Использовать на наковальне --- #
   Enchantments: # --- Зачарования --- #
     - DURABILITY: 5 # --- Защита --- #
+  Attributes:
+    All:
+      Health: 2
+    Feet:
+      MovementSpeed: 0.5
+
+happy_feet:
+  Id: leather_boots
+  Display: 'Penguin Hide'
+  Attributes:
+    All:
+      Health: 2
+    Feet:
+      MovementSpeed: 0.04

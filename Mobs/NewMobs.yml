@@ -27,14 +27,13 @@ Legion: # --- Название моба --- #
     Silent: true # --- Безмолвный --- #
   AITargetSelector: # --- Мофидикатор цели ИИ --- #
     - 0 clear # --- Очистка дефолтных параметров --- #
-    #    - 1 OtherFaction
-    - 1 SpecificFactionMonsters #NAME# # --- Моб фракции --- #
-    - 2 monsters # --- Монстры --- #
+    - 1 monsters # --- Монстры --- #
+  #    - 2 SpecificFactionMonsters #NAME# # --- Моб фракции --- #
   AIGoalSelector: # --- Тип атаки на цели ИИ --- #
     - 0 clear # --- Очистка дефолтных параметров --- #
     - 1 avoidzombies # --- Атака зомби --- #
   Equipment: # --- Экипирование --- #
-    - LEGION_HELMET:4 # --- Шлем --- #
+    - LEGIONHELMET:4 # --- Шлем --- #
     - IRON_CHESTPLATE:3 # --- Нагрудник --- #
     - IRON_LEGGINS:2 # --- Штаны --- #
     - IRON_BOOTS:1 # --- Ботинки --- #
@@ -51,4 +50,8 @@ Legion: # --- Название моба --- #
   KillMessages: # --- Сообщение об убийстве --- #
     - '<target.name> was kill by <mob.name>' # --- Текст убийства --- #
   Skills: # --- Умение --- #
+    - damage{a=2} @PIR{r=5} ~onDamaged <80% 0.3
+    - skills{s=DeathlyAura} @Self ~onTimer:20
+    - skills{s=ArrowBarrage} @Self ~onTimer:100
+    - skills{s=Engorgel} @Self ~onInteract
     - actionmessage{m="&lHealth - <mob.hp>"} @PIR ~onTimer:5 # --- Отображение ХП на экране --- #
