@@ -1,0 +1,30 @@
+DeathlyAura:
+  Cooldown: 0
+  Skills:
+    - damage{a=2;ia=true} @PIR{r=5}
+    - effect:particlering{particle=reddust;r=3;a=3;points=16;y=0.5} @Self
+
+ArrowBarrage:
+  Cooldown: 0
+  Conditions:
+    - playerwithin{d=4} true
+  Skills:
+    - arrowvolley{a=1;s=0;v=30;f=0;rd=20;repeat=4;repeatInterval=10} @target
+
+Engorgel:
+  Cooldown: 0
+  Conditions:
+    - playerwithin{d=4} true
+  Skills:
+    - sound{s=block.note_block.bell;p=2;repeat=7;repeatInterval=5} @target
+    - effect:particlering{particle=reddust;r=1;a=3;points=16;repeat=3;repeatInterval=10;y=0.5} @target
+    - delay 40
+    - skills{s=Engorgel2} @Self
+
+Engorgel2:
+  Cooldown: 0
+  Conditions:
+    - playerwithin{d=4} true
+  Skills:
+    - sound{s=entity.generic.eat;repeat=3;repeatInterval=4;p=0.7} @Self
+    - Consume{d=1000;h=20;} @target
